@@ -1,0 +1,422 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#screen {
+    position: relative;
+    height: 56.25vw;
+    width: 100vw;
+}
+
+#game {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/**********************************************GAME BACKGROUND*****************************************************************/
+
+#game_background {
+    top: 0;
+    left: 0;
+    background-image: url(grafik/baggrund.svg);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/****************************************************GAME ELEMENTS*********************************************************/
+
+#game_elements {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#luna_container1 {
+    position: absolute;
+    top: 20vw;
+    right: 45vw;
+}
+
+#luna_sprite1 {
+    height: 30vw;
+    width: 15vw;
+    background-image: url(grafik/luna.svg);
+    background-size: 100%;
+}
+
+/****************************************DE KLIKBARE FIGURER*************************************************************/
+.kat {
+    position: absolute;
+    height: 12vw;
+    width: 12vw;
+    background-image: url(grafik/kat.svg);
+    background-size: 100%;
+    cursor: pointer;
+
+}
+
+.vampyr {
+    position: absolute;
+
+    height: 12vw;
+    width: 12vw;
+    background-image: url(grafik/vampyr.svg);
+    background-size: 100%;
+    cursor: pointer;
+
+}
+
+.spoegelse {
+    position: absolute;
+    height: 10vw;
+    width: 8vw;
+    background-image: url(grafik/spoegelse.svg);
+    background-size: 100%;
+    cursor: pointer;
+
+}
+
+.djaevel {
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    background-image: url(grafik/djaevel.svg);
+    background-size: 100%;
+    cursor: pointer;
+
+}
+
+.frujensen {
+    position: absolute;
+    height: 12vw;
+    width: 12vw;
+    background-image: url(grafik/fru_jensen.svg);
+    background-size: 100%;
+    cursor: pointer;
+
+}
+
+.hrjensen {
+    position: absolute;
+    height: 12vw;
+    width: 12vw;
+    background-image: url(grafik/hr_jesen.svg);
+    background-size: 100%;
+    cursor: pointer;
+
+}
+
+/********************************************************POSITIONER*************************************************************/
+.position1 {
+    top: 27vw;
+    right: 14vw;
+    transform: rotate(-33deg);
+}
+
+.position2 {
+    top: 24.5vw;
+    right: 26vw;
+}
+
+.position3 {
+    top: 17vw;
+    right: 17vw;
+    transform: rotate(-145deg);
+}
+
+.position4 {
+    top: 18vw;
+    right: 62vw;
+    transform: rotate(110deg);
+}
+
+.position5 {
+    top: 25.5vw;
+    right: 63vw;
+}
+
+.position6 {
+    top: 30vw;
+    right: 78.5vw;
+    transform: rotate(65deg);
+}
+
+.position7 {
+    top: 26vw;
+    right: 34.5vw;
+    transform: rotate(-40deg);
+}
+
+.position8 {
+    top: 1vw;
+    right: 15.5vw;
+    transform: rotate(-35deg);
+}
+
+.position9 {
+    top: 8vw;
+    right: 68vw;
+}
+
+.position10 {
+    top: 22vw;
+    right: 84vw;
+}
+
+/***********************************************************ANIMATIONER*********************************************************/
+.popup {
+    animation-name: popup_kf;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes popup_kf {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.pause_fade {
+    animation-name: pausefade_kf;
+    animation-duration: 1s;
+}
+
+@keyframes pausefade_kf {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+
+    }
+}
+
+.hide {
+    filter: grayscale(1);
+}
+
+.hide_screen {
+    display: none;
+    pointer-events: none;
+}
+
+.shrink {
+    animation-name: shrink_kf;
+    animation-duration: 20s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shrink_kf {
+    0% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(0)
+    }
+}
+
+/*******************************************************************************************************************************/
+#forgrund {
+    top: 0;
+    left: 0;
+    background-image: url(grafik/forgrund.svg);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+
+}
+
+#startbutton_container {
+    position: absolute;
+    top: 35vw;
+    right: 58vw;
+
+}
+
+#startbutton_sprite {
+    position: absolute;
+    background-image: url(grafik/spilnu.svg);
+    background-size: cover;
+    height: 13.5vw;
+    width: 23.5vw;
+}
+
+#playagain_container {
+    position: absolute;
+    top: 37vw;
+    right: 85vw;
+}
+
+#playagain_sprite {
+    position: absolute;
+    background-image: url(grafik/proevigen.svg);
+    background-size: cover;
+    height: 13.5vw;
+    width: 29.5vw;
+}
+
+#playagain_container1 {
+    position: absolute;
+    top: 37vw;
+    right: 85vw;
+}
+
+#playagain_sprite1 {
+    position: absolute;
+    background-image: url(grafik/proevigen.svg);
+    background-size: cover;
+    height: 13.5vw;
+    width: 29.5vw;
+}
+
+#game_ui {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+
+/*------UI ELEMENTER*/
+#energy_boardcontainer {
+    display: flex;
+    position: absolute;
+    bottom: 1vw;
+    right: 5vw;
+}
+
+#popupwindow_container {
+    position: absolute;
+    top: 17vw;
+    left: 29vw;
+}
+
+#popupwindow_sprite {
+    background-size: cover;
+    background-image: url(grafik/popup.svg);
+    height: 29vw;
+    width: 37vw;
+}
+
+#startknap_container {
+    position: absolute;
+    top: 38vw;
+    right: 58vw;
+}
+
+#startknap_sprite {
+    position: absolute;
+    background-image: url(grafik/knap.svg);
+    background-size: cover;
+    height: 5.5vw;
+    width: 10.5vw;
+}
+
+.heart {
+    height: 3.7vw;
+    width: 4.2vw;
+    background-image: url(grafik/heart.svg);
+    background-size: cover;
+    margin-right: 0.5vw;
+
+}
+
+#time_container {
+    position: absolute;
+    top: 52vw;
+    left: 38vw;
+    width: 20vw;
+    height: 2vw;
+    background-color: white;
+}
+
+#time_sprite {
+    width: 20vw;
+    height: 2vw;
+    background-color: orange;
+    transform-origin: left;
+}
+
+#pumpkin {
+    position: absolute;
+    bottom: 1vw;
+    right: 85vw;
+    height: 5.5vw;
+    width: 7vw;
+    background-image: url(grafik/point2.svg);
+    background-size: 100%;
+}
+
+#point {
+    position: absolute;
+    bottom: 2vw;
+    right: 82vw;
+    color: white;
+    width: 2rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/*START----------------------------------------------------*/
+
+#start {
+    top: 0;
+    left: 0;
+    background-image: url(grafik/startskaerm2.svg);
+    /*   background-size: cover;*/
+    background-repeat: no-repeat;
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+/*GAME OVER------------------------------------------------*/
+
+#game_over {
+    height: 100%;
+    width: 100%;
+    background-image: url(grafik/game_over2.svg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*LEVEL COMPLETE-------------------------------------------*/
+
+#level_complete {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(grafik/victory2.svg);
+    background-size: cover;
+    position: absolute;
+}
+
+.paused {
+    animation-play-state: paused;
+}
